@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" parallel="tests" name="Failed suite [Nopcommerce]">
+  <parameter name="url" value="https://demo.nopcommerce.com/"/>
+  <listeners>
+    <listener class-name="reportConfig.ExtentTestListener"/>
+  </listeners>
+  <test thread-count="3" parallel="tests" name="Run on firefox(failed)">
+    <parameter name="browserName" value="firefox"/>
+    <classes>
+      <class name="com.nopcommerce.user.Register">
+        <methods>
+          <include name="afterClass"/>
+          <include name="Register_05_Valid_Email_And_Password_Less_Than_6_Chars" invocation-numbers="0"/>
+          <include name="beforeClass"/>
+          <include name="initBeforeSuite"/>
+        </methods>
+      </class> <!-- com.nopcommerce.user.Register -->
+    </classes>
+  </test> <!-- Run on firefox(failed) -->
+</suite> <!-- Failed suite [Nopcommerce] -->

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Nopcommerce" parallel="tests" thread-count="3">
+
+	<parameter name="url" value="https://demo.nopcommerce.com/" />
+<!-- 	<parameter name="severName" value="Nopcomerce" /> -->
+
+	<listeners>
+
+		<listener class-name="reportConfig.ExtentTestListener" />
+
+	</listeners>
+
+
+	<test name="Run on firefox">
+		<parameter name="browserName" value="firefox" />
+		
+		<classes>
+			<class name="com.nopcommerce.user.Register" />
+
+		</classes>
+	</test>
+
+	<!-- <test name="Run on FIREFOX"> -->
+	<!-- <parameter name="browser" value="FIREFOX" /> -->
+	<!-- <classes> -->
+	<!-- <class name="com.noikhu.admin.TC_01_Add_New_Folder_And_Layer" /> -->
+	<!-- </classes> -->
+	<!-- </test> -->
+
+
+	<!-- <test name="Run on EDGE"> -->
+	<!-- <parameter name="browser" value="EDGE" /> -->
+	<!-- <classes> -->
+	<!-- <class name="com.noikhu.admin.TC_01_Add_New_Folder_And_Layer" /> -->
+	<!-- </classes> -->
+	<!-- </test> -->
+
+
+
+</suite>
